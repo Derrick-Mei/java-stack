@@ -28,7 +28,7 @@ class Stack
 
     String numOfItems()
     {
-        if (stack == null)
+        if (stack.size() == 0)
         {
             return "There are no items in your Stack";
         }
