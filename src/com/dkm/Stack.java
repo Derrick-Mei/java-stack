@@ -2,9 +2,14 @@ package com.dkm;
 
 import java.util.ArrayList;
 
-public class Stack
+class Stack
 {
-    public ArrayList<String> stack;
+    private ArrayList<String> stack;
+
+    public Stack()
+    {
+        this.stack = new ArrayList<>(1000);
+    }
 
     ArrayList<String> print()
     {
@@ -23,7 +28,7 @@ public class Stack
 
     String numOfItems()
     {
-        if (stack.size() == 0)
+        if (stack == null)
         {
             return "There are no items in your Stack";
         }
@@ -31,5 +36,11 @@ public class Stack
         {
             return String.valueOf(stack.size());
         }
+    }
+
+    @Override
+    public String toString()
+    {
+        return "" + stack;
     }
 }
