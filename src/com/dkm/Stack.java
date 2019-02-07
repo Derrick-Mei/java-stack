@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 class Stack
 {
-    private ArrayList<String> stack;
+    private final ArrayList<String> stack;
 
     public Stack()
     {
@@ -21,9 +21,9 @@ class Stack
         stack.add(plate);
     }
 
-    String pop()
+    void pop()
     {
-        return stack.remove(stack.size() - 1);
+        stack.remove(stack.size() - 1);
     }
 
     String numOfItems()
